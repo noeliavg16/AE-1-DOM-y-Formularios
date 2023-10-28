@@ -1,0 +1,99 @@
+<!-- REQUERIMIENTO 2 
+    ----------------
+En esta actividad debes desarrollar un formulario completo, sin envío al servidor, que sirva para dar de alta
+un pedido de una pizza dentro de una web de una pizzería.
+Los campos del formulario son los siguientes:
+- Nombre.
+- Dirección.
+- Teléfono.
+- Email.
+- Un radio button con el tamaño de la pizza, pudiendo ser pequeña, mediana o grande.
+- 4 Checkbox con los diferentes ingredientes de la pizza.
+- Un botón de procesar el pedido.
+Todos los campos tienen que estar rellenos de tipo texto deben de estar rellenos para que sean válidos, 
+además debe de elegir obligatoriamente un tamaño de la pizza y al menos un ingrediente para ella.
+Al pulsar el botón de procesar el pedido, se mostrará el precio total del pedido calculándolo en
+base a los siguientes parámetros:
+- 5€ para la pizza pequeña.
+- 10€ para la pizza mediana.
+- 15€ para la pizza grande.
+- Cada ingrediente elegido tendrá un valor de 1€.
+
+tamaño grande value 
+ingrediente value
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        
+    <!--Se importa el fichero JS y CSS al fichero HTML-->
+    <script type="text/javascript" src="script2.js"></script>
+    <link rel="stylesheet" type="text/css" href="style2.css"> 
+
+</head>
+<body>
+    <form id="formulario" name="formulario" action=""> <!--Este formulario no es necesario enviarlo al servidor-->
+        <fieldset>
+            <legend>Datos a rellenar:</legend>
+            <!--Todos los campos de tipo texto deben estar rellenos para que el formulario se valide, esto se realiza en JS-->
+            <label for="nombre">Nombre:</label>
+            <br/>
+            <input id="nombre" type="text" name="nombre" value=""/>
+            <br/>
+            <br/>
+            <label for="direccion">Dirección: </label>
+            <br/>
+            <input id="direccion" type="text" name="direccion" value=""/>
+            <br/>
+            <br/>
+            <label for="telefono">Teléfono: </label>
+            <br/>
+            <input id="telefono" type="number" name="telefono" value="" /> 
+            <br/>
+            <br/>
+            <label for="email">Email: </label>
+            <br/>
+            <input id="email" type="email" name="email" value=""/> 
+            <br/>
+            <br/>
+            <br/>
+            <label for="tamanoPizza">🍕 Tamaño de la pizza: </label>
+            <br/>	
+            <!--Se debe de elegir obligatoriamente un TAMAÑO de la pizza-->
+            <input id="tamaño_pequeño" type="radio" name="tamanoPizza" value="5" />Pequeña por 5 €<br />	
+            <input id="tamaño_mediano" type="radio" name="tamanoPizza" value="10" />mediana por 10 €<br />	
+            <input id="tamaño_grande" type="radio" name="tamanoPizza" value="15" />Grande por 15 €<br />	
+            <br/>
+            <br/>
+            <br/>
+            <label for="ingredientes">🍕 Ingredientes pizza: </label>
+            <br/>	
+            <!--Se debe de elegir obligatoriamente un INGREDIENTE de la pizza-->
+            <!--<input type="checkbox" name="ingredientes" value="L" />Aceitunas<br />	-->
+            <input id="aceitunas" type="checkbox" name="ingredientes" value="1"/>
+            <label for="aceitunas">Aceitunas🫒</label><br />
+
+            <input id="queso" type="checkbox" name="ingredientes" value="1" />
+            <label for="queso">Extra de queso🧀</label><br/>
+
+            <input id="bacon" type="checkbox" name="ingredientes" value="1"/>	
+            <label for="bacon">Bacon crispy 🥓</label><br/>
+
+            <input id="piña" type="checkbox" name="ingredientes" value="1" />	
+            <label for="bacon">Piña 🍍</label><br/>
+            <br/>	
+            <br/>
+            <input id="botonPrueba" type="button" value="Procesar pedido"> 
+            <br/>	
+            <br/>
+            <label for="precio">Precio total de tu pedido: </label><br/>
+            <input type="text" id="precioTotal"/>
+        </fieldset>
+    </form>
+</body>
+</html>

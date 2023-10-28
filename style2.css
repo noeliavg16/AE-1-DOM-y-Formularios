@@ -1,0 +1,47 @@
+/* Estilo para el cuerpo de la página */
+body {
+    background-image: url('img2/piz.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 10px;
+    padding: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+
+
+/* Estilo para el formulario */
+#formulario {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #ffffffc5;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para los botones */
+input[type="button"] {
+    background-color: #106d00ca;
+    color: rgba(201, 255, 215, 0.812);
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+/* Estilo para los campos de entrada de texto */
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+    width: 25%;
+    padding: 5px;
+    border: 2px solid #57575799;
+    background-color: rgba(0, 0, 0, 0.174); 
+    border-radius: 5px;
+    font-size: 16px;
+}
+
